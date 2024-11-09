@@ -23,10 +23,6 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18.Lib
                     {
                         matrix[i, j] = 0;
                     }
-                    else
-                    {
-                        matrix[i, j] = 1;
-                    }
                 }
             }
             string str = "";

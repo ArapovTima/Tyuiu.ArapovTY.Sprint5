@@ -19,13 +19,17 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18.Lib
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    if (matrix[i, j] >= 0)
+                    if (matrix[i, j] > 0)
                     {
                         matrix[i, j] = 1;
                     }
                     if (matrix[i, j] < 0)
                     {
                         matrix[i, j] = 0;
+                    }
+                    if (matrix[i,j] == 0)
+                    {
+                        matrix[i,j] = 1;
                     }
                 }
             }

@@ -23,6 +23,10 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18.Lib
                     {
                         matrix[i, j] = 0;
                     }
+                    if (matrix[i, j] > 0)
+                    {
+                        matrix[i, j] = 1;
+                    }
                 }
             }
             string str = "";

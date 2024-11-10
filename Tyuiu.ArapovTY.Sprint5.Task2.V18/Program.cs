@@ -5,11 +5,11 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18
     {
         static void Main(string[] args)
         {
-            int[,] matrx = new int[3, 3] { { 3, 8, 4},
+            int[,] mtrx = new int[3, 3] { { 3, 8, 4},
                                           { -5, -4, -3 },
                                           { -9, 0, 2 } };
-            int rows = matrx.GetUpperBound(0) + 1;
-            int columns = matrx.Length / rows;
+            int rows = mtrx.GetUpperBound(0) + 1;
+            int columns = mtrx.Length / rows;
             DataService ds = new DataService();
             Console.Title = "Спринт #5 | Выполнил: Арапов Т. Я. | АСОиУб-24-1";
             Console.WriteLine("***************************************************************************");
@@ -30,7 +30,7 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.Write($"{matrx[i, j]} \t");
+                    Console.Write($"{mtrx[i, j]} \t");
                 }
                 Console.WriteLine();
             }
@@ -38,7 +38,7 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            string res = ds.SaveToFileTextData(matrx);
+            string res = ds.SaveToFileTextData(mtrx);
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
             Console.ReadKey();

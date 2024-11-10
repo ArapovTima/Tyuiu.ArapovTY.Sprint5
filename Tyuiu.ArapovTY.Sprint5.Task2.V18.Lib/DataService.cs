@@ -53,7 +53,7 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18.Lib
                 }
                 str = "";
             }
-            return "1;1;1\n0;0;0\n0;0;1";
+            return path;
         }
     }
 }

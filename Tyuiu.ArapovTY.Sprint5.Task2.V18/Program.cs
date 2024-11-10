@@ -5,9 +5,9 @@ namespace Tyuiu.ArapovTY.Sprint5.Task2.V18
     {
         static void Main(string[] args)
         {
-            int[,] mtrx = new int[3, 3] { { 3, 8, 4},
-                                          { -5, -4, -3 },
-                                          { -9, 0, 2 } };
+            int[,] mtrx = new int[3, 3] { { 2, 2, 2},
+                                          { 2, 2, 2 },
+                                          { 2, 2, 2 } };
             int rows = mtrx.GetUpperBound(0) + 1;
             int columns = mtrx.Length / rows;
             DataService ds = new DataService();

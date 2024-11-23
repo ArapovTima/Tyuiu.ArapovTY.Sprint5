@@ -7,11 +7,17 @@ namespace Tyuiu.ArapovTY.Sprint5.Task5.V9.Lib
         public double LoadFromDataFile(string path)
         {
             {
-                string x = File.ReadAllText(path);
-                FileInfo fileInfo = new FileInfo(path);
-                x = x.Replace(".", ",");
-                double max = Math.Max(1, 17);
-                return max;
+                string fileContent = File.ReadAllText(path);
+                var values = fileContent.Split(new[] { ' ', '\n', '\r', ',', ';' }, StringSplitOptions.RemoveEmptyEntries).Select(val =>
+                {
+                    if (double.TryParse(val, out double doubleValue))
+                    {
+                        return Math.Round(doubleValue, 3);
+                    }
+                    return (double?)null;
+                }).Where(val => val.HasValue).Select(val => val.Value).ToArray();
+                var maxInteger = values.Where(val => val == Math.Truncate(val)).Max();
+                return maxInteger;
             }
         }
     }

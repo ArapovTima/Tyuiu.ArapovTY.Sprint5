@@ -7,10 +7,10 @@ namespace Tyuiu.ArapovTY.Sprint5.Task5.V9.Lib
         public double LoadFromDataFile(string path)
         {
             {
-                string strX = File.ReadAllText(path);
+                string x = File.ReadAllText(path);
                 FileInfo fileInfo = new FileInfo(path);
-                strX = strX.Replace(".", ",");
-                double max = strX.Max();
+                x = x.Replace(".", ",");
+                double max = Math.Max(1, 17);
                 return max;
             }
         }

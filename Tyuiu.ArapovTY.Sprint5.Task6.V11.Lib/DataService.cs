@@ -27,7 +27,7 @@ namespace Tyuiu.ArapovTY.Sprint5.Task6.V11.Lib
                     }
                 }
             }
-            return count; // Возвращаем результат
+            return count;
         }
         
     }

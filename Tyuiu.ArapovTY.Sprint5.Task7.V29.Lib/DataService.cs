@@ -18,7 +18,7 @@ namespace Tyuiu.ArapovTY.Sprint5.Task7.V29.Lib
             string pattern = Regex.Replace(content, @"\b[0-9]\b", string.Empty);
             string clean = Regex.Replace(pattern, @"s+", "  ").Trim();
             File.WriteAllText(pathSaveFile, clean);
-            return "сегодня 12 завтра послезавтра 34 и потом";
+            return pathSaveFile;
         }
     }
 }

@@ -16,10 +16,8 @@ namespace Tyuiu.ArapovTY.Sprint5.Task7.V29.Lib
             }
             string content = File.ReadAllText(path);
             string pattern = @"\b[0-9]\b";
-            string clean = Regex.Replace(content, @"s+", " ").Trim();
             string res = Regex.Replace(content, pattern, string.Empty);
             File.WriteAllText(pathSaveFile, res.Trim());
-            File.WriteAllText(pathSaveFile, clean.Trim());
             return pathSaveFile;
         }
     }

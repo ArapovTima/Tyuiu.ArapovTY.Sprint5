@@ -1,5 +1,6 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint5;
 using System.IO;
+using System.Text.RegularExpressions;
 namespace Tyuiu.ArapovTY.Sprint5.Task7.V29.Lib
 {
     public class DataService : ISprint5Task7V29
@@ -13,23 +14,10 @@ namespace Tyuiu.ArapovTY.Sprint5.Task7.V29.Lib
             {
                 File.Delete(pathSaveFile);
             }
-            string strLine = "";
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    for (int i = 0; i < line.Length; i++)
-                    {
-                        if ((line[i] != '1') && (line[i] != '2') && (line[i] != '3') && (line[i] != '4') && (line[i] != '5') && (line[i] != '6') && (line[i] != '7') && (line[i] != '8') && (line[i] != '9') && (line[i] != '0'))
-                        {
-                            strLine += line[i];
-                        }
-                    }
-                    File.AppendAllText(pathSaveFile, strLine + Environment.NewLine);
-                    strLine = "";
-                }
-            }
+            string content = File.ReadAllText(path);
+            string pattern = @"\b[0-9]\b";
+            string res = Regex.Replace(content, pattern, string.Empty);
+            File.WriteAllText(pathSaveFile, res.Trim());
             return pathSaveFile;
         }
     }
